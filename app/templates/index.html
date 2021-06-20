@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rick and Morty</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <div class="container">
+        {% for gender in characters %}
+        <div class="character-container">
+            <img src="{{ characters[gender]['image'] }}" alt="{{ characters[gender]['name'] }}">
+            <ul>
+                <li class="character-name">{{ characters[gender]['name'] }}</li>            
+                <li class="li-container">
+                    <span class="property">Status:</span>
+                    <br>
+                    <span class="property-value">
+                        {{ characters[gender]['status'] }}
+                    </span>
+                </li>
+                <li class="li-container">
+                    <span class="property">Planeta de origem:</span>
+                    <br>
+                    <span class="property-value">
+                        {{ characters[gender]['origin']['name'] }}
+                    </span>
+                </li>
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
