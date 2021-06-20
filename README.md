@@ -17,4 +17,4 @@
 
 # Preview
 
-![alt text](img/preview.png)
+![Preview](img/preview.png)
