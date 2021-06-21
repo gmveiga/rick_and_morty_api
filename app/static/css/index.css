@@ -59,3 +59,10 @@ body {
 .li-container:last-child {
   margin-bottom: 0;
 }
+
+.episodes-title {
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 16px 0 6px 0;
+}

@@ -30,6 +30,25 @@
                         {{ characters[gender]['origin']['name'] }}
                     </span>
                 </li>
+                <li class="episodes-title"> 
+                    Episódios:
+                </li>
+                {% for episode in characters[gender]['episodes'] %}
+                <li class="li-container">
+                    <span class="property">Nome:</span>
+                    <br>
+                    <span class="property-value">
+                        {{episode['name']}}
+                    </span>
+                </li>
+                <li class="li-container">
+                    <span class="property">Data de exibição:</span>
+                    <br>
+                    <span class="property-value">
+                        {{episode['air_date']}}
+                    </span>
+                </li>
+                {% endfor %}
             </ul>
         </div>
         {% endfor %}
